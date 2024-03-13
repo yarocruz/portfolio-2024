@@ -6,6 +6,7 @@
   --foreground: #ffffff;
   --background-start: #1B2652;
   --background-end: #080e27;
+  --yellow: #D8B706
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +20,10 @@
 body {
   color: var(--foreground);
   background: linear-gradient(to bottom, var(--background-start), var(--background-end));
+}
+
+.logo {
+  color: var(--yellow);
 }
 
 @layer utilities {
