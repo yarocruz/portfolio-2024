@@ -1,3 +1,4 @@
+import Image from 'next/image'
 
 export default function Nav() {
     return (
@@ -7,9 +8,7 @@ export default function Nav() {
                 <span>Software Engineer</span>
             </div>
             {/* TODO ADD LINK ICONS FOR EMAIL, GITHUB */}
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1418.25 30.862">
-                <path id="Path_1" data-name="Path 1" d="M302,220.327H471.353l39.213,29.862H1525.793l32.6-29.862H1720.25" transform="translate(-302 -219.827)" fill="none" stroke="#03c3f2" strokeWidth="0.78"/>
-            </svg>
+            <Image src='./top-line.svg' alt="SVG" width={1418.25} height={30.862} />
         </nav>
     )
 }
