@@ -1,11 +1,18 @@
-import Nav from "./components/nav";
-import Footer from "./components/footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex md:container mx-auto min-h-screen flex-col justify-between p-24">
-      <Nav />
-      <Footer /> 
-    </main>
+    <div className="flex">
+      <nav>
+        <ul className="flex">
+          <li className="mr-5">
+            <Link href="/">ABOUT</Link>
+          </li>
+          <li>
+            <Link href="/projects">PORTFOLIO</Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }
