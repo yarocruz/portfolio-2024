@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col -mt-20">
       <nav className="mb-5">
         <ul className="flex font-bold text-xl">
           <li className="mr-5">
@@ -13,7 +13,7 @@ export default function Projects() {
           </li>
         </ul>
       </nav>
-      <section className="section">
+      <section className="section sm:h-80">
         <h1>TODOS</h1>
       </section>
     </div>

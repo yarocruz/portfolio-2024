@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col -mt-20">
       <nav className="mb-5">
         <ul className="flex font-bold text-xl">
           <li className="mr-5 underline underline-offset-8 decoration-sky-500">
@@ -13,7 +13,7 @@ export default function Home() {
           </li>
         </ul>
       </nav>
-      <section className="section">
+      <section className="section sm:h-80">
         <h1 className="text-2xl font-black mb-3">Hi 👋, I'm Jay Cruz</h1>
         <p className="">I’m a Software Engineer based in Orlando, FL. My main domain has been in
         Web Development, but I’m interested in the broader world of Programming. 
