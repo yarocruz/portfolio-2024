@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <div className="flex flex-col sm:-mt-20">
+    <div className="flex flex-col sm:-mt-20 my-10">
       <nav className="mb-5">
         <ul className="flex font-bold text-xl">
           <li className="mr-5">
