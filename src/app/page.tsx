@@ -14,7 +14,7 @@ export default function Home() {
         </ul>
       </nav>
       <section className="section sm:h-80">
-        <h1 className="text-2xl font-black mb-3">Hi 👋, I'm Jay Cruz</h1>
+        <h1 className="text-2xl font-black mb-3">Hi 👋, I&apos;m Jay Cruz</h1>
         <p className="">I’m a Software Engineer based in Orlando, FL. My main domain has been in
         Web Development, but I’m interested in the broader world of Programming. 
         I studied Graphic Design and specialized in Web Design. I also completed
