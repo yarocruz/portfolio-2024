@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="flex md:container mx-auto min-h-screen flex-col justify-between p-24">
+        <main className="flex container mx-auto p-10 min-h-screen flex-col justify-between sm:p-24">
           <Nav />
             {children}
           <Footer /> 

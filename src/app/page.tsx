@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col -mt-20">
+    <div className="flex flex-col sm:-mt-20">
       <nav className="mb-5">
         <ul className="flex font-bold text-xl">
           <li className="mr-5 underline underline-offset-8 decoration-sky-500">
