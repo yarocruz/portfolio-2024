@@ -6,7 +6,9 @@
   --foreground: #ffffff;
   --background-start: #1B2652;
   --background-end: #080e27;
-  --yellow: #D8B706
+  --yellow: #D8B706;
+  --section: #09112C;
+  --text: #BFBFBF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +26,13 @@ body {
 
 .logo {
   color: var(--yellow);
+}
+
+.section {
+  background: var(--section);
+  border: 2px solid var(--yellow);
+  padding: 50px 30px;
+  border-bottom-right-radius: 50px;
 }
 
 @layer utilities {
