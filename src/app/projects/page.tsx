@@ -13,7 +13,7 @@ export default function Projects() {
           </li>
         </ul>
       </nav>
-      <section className="section sm:h-80">
+      <section className="section md:h-80">
         <h1>TODOS</h1>
       </section>
     </div>
