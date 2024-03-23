@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -13,9 +14,10 @@ export default function Home() {
           </li>
         </ul>
       </nav>
-      <section className="section md:h-80">
-        <h1 className="text-2xl font-black mb-3">Hi 👋, I&apos;m Jay Cruz</h1>
-        <p className="">I’m a Software Engineer based in Orlando, FL. My main domain has been in
+      <section className="section lg:h-80">
+        <Image src="/stoic.jpg" alt="Profile Picture" width={200} height={200} className="float-left rounded mr-5 mb-4" />
+        <h1 className="text-2xl font-black mb-3">Hello 👋, I&apos;m Jay Cruz</h1>
+        <p className="lg:w-10/12">I’m a Software Engineer based in Orlando, FL. My main domain has been in
         Web Development, but I’m interested in the broader world of Programming. 
         I studied Graphic Design and specialized in Web Design. I also completed
         a “Full-Stack” JavaScript centered Coding Bootcamp. I did a short gig with a Startup

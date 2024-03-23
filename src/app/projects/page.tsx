@@ -66,7 +66,7 @@ export default function Projects() {
           </li>
         </ul>
       </nav>
-      <section className="section md:h-80">
+      <section className="section lg:h-80">
         <div className="md:flex">
             <ul className="md:mr-10 basis-1/4">
                 {PROJECTS.map((project) => (
@@ -77,7 +77,7 @@ export default function Projects() {
             </ul>
             <section className="flex flex-col">
                 <h1 className="logo text-lg font-black mb-5">{`${filteredProject[0].title.toUpperCase()} - ${filteredProject[0].short_description}`}</h1>
-                <p className="mb-5">{filteredProject[0].long_description}</p>
+                <p className="mb-5 lg:w-10/12">{filteredProject[0].long_description}</p>
                 <div className="flex text-cyan-400">
                   <span className="mr-4"><a href="#">demo</a></span>
                   <span><a href="#">code</a></span>
