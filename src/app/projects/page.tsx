@@ -57,18 +57,21 @@ export default function Projects() {
         </ul>
       </nav>
       <section className="section md:h-80">
-        <div className="flex justify-stretch">
-            <ul className="mr-10">
+        <div className="md:flex">
+            <ul className="md:mr-10 basis-1/4">
                 {PROJECTS.map((project) => (
-                    <li key={project.id} className="mb-5 font-black hover:bg-cyan-400">
+                    <li key={project.id} className="mb-5 text-lg font-black hover:bg-cyan-400">
                         <a href="#">{project.title.toUpperCase()}</a>
                     </li>
                 ))}
             </ul>
-            <section>
-                <h1>Title</h1>
-                <p>Short Description</p>
-                <span>Demo</span><span>Code</span>
+            <section className="flex flex-col">
+                <h1 className="logo text-lg font-black mb-5">PODLR - Like Letterboxd but for Podcasts</h1>
+                <p className="mb-5">Podlr is a web application that allows users to keep track of the podcasts they listen to. Users can rate, review, and keep track of their favorite episodes. podlr also provides a social aspect, allowing users to follow their friends and see what they are listening to.</p>
+                <div className="flex">
+                  <span className="mr-4">Demo</span>
+                  <span>Code</span>
+                </div>
             </section>
         </div>
       </section>
