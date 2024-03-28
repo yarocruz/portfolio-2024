@@ -5,11 +5,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1418.25 30.862">
   <defs>
     <linearGradient id="animatedGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#03c3f2">
-        <animate attributeName="stop-color" values="#03c3f2;pink;#03c3f2" dur="4s" repeatCount="indefinite"/>
+      <stop offset="0%" stop-color="pink">
+        <animate attributeName="stop-color" values="#03c3f2;hotpink;#03c3f2" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="25%" stop-color="pink">
+        <animate attributeName="stop-color" values="hotpink;#03c3f2;hotpink" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#03c3f2">
+        <animate attributeName="stop-color" values="#03c3f2;hotpink;#03c3f2" dur="2s" repeatCount="indefinite"/>
       </stop>
       <stop offset="100%" stop-color="pink">
-        <animate attributeName="stop-color" values="pink;#03c3f2;pink" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="stop-color" values="hotpink;#03c3f2;hotpink" dur="0.11s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
   </defs>

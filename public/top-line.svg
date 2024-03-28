@@ -5,13 +5,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1418.25 30.862">
   <defs>
     <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <!-- Define more stops to create a more dynamic color cycling effect -->
       <stop offset="0%" stop-color="pink">
-        <animate attributeName="stop-color" values="pink;#03c3f2;pink" dur="10s" repeatCount="indefinite"/>
+        <animate attributeName="stop-color" values="hotpink;#03c3f2;hotpink;#03c3f2" dur="3s" repeatCount="indefinite"/>
       </stop>
-      <stop offset="100%" stop-color="#03c3f2">
-        <animate attributeName="stop-color" values="#03c3f2;pink;#03c3f2" dur="10s" repeatCount="indefinite"/>
+      <stop offset="25%" stop-color="pink">
+        <animate attributeName="stop-color" values="hotpink;#03c3f2;hotpink" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#03c3f2">
+        <animate attributeName="stop-color" values="#03c3f2;hotpink;#03c3f2" dur="2s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="pink">
+        <animate attributeName="stop-color" values="#03c3f2;hotpink;#03c3f2;hotpink" dur="0.11s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
   </defs>
-  <path id="Path_1" data-name="Path 1" d="M302,220.327H471.353l39.213,29.862H1525.793l32.6-29.862H1720.25" transform="translate(-302 -219.827)" fill="none" stroke="url(#animatedGradient)" strokeWidth="1.78"/>
+  <path class="lines" id="Path_1" data-name="Path 1" d="M302,220.327H471.353l39.213,29.862H1525.793l32.6-29.862H1720.25" transform="translate(-302 -219.827)" fill="none" stroke="url(#animatedGradient)" strokeWidth="0.78"/>
 </svg>
+
+<!-- <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100">
+    <animate attributeName="fill" values="#03c3f2;pink;#03c3f2" dur="4s" repeatCount="indefinite"/>
+  </rect>
+</svg> -->
