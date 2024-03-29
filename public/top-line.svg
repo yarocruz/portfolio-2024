@@ -20,7 +20,7 @@
       </stop>
     </linearGradient>
   </defs>
-  <path class="lines" id="Path_1" data-name="Path 1" d="M302,220.327H471.353l39.213,29.862H1525.793l32.6-29.862H1720.25" transform="translate(-302 -219.827)" fill="none" stroke="url(#animatedGradient)" strokeWidth="0.78"/>
+  <path class="lines" id="Path_1" data-name="Path 1" d="M302,220.327H471.353l39.213,29.862H1525.793l32.6-29.862H1720.25" transform="translate(-302 -219.827)" fill="none" stroke="url(#animatedGradient)" stroke-width="2"/>
 </svg>
 
 <!-- <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">

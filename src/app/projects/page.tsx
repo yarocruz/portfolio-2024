@@ -68,10 +68,14 @@ export default function Projects() {
       </nav>
       <section className="section lg:h-80">
         <div className="md:flex">
-            <ul className="md:mr-10 basis-1/4">
+            <ul className="md:mr-10 -ml-8 basis-1/4">
                 {PROJECTS.map((project) => (
-                    <li key={project.id} className={selectedProjectID === project.id ? "mb-5 text-lg font-black bg-cyan-400" : "mb-5 text-lg font-black hover:bg-cyan-400" }>
-                        <a onClick={() => handleProjectSelection(project.id)} href="#">{project.title.toUpperCase()}</a>
+                    <li 
+                      key={project.id} 
+                      className={selectedProjectID === project.id ? "mb-5 px-10 text-lg font-black bg-cyan-400 hover:cursor-pointer" : "mb-5 px-10 text-lg font-black hover:cursor-pointer" }
+                      onClick={() => handleProjectSelection(project.id)}
+                      >
+                        {project.title.toUpperCase()}
                     </li>
                 ))}
             </ul>

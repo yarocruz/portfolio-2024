@@ -41,6 +41,11 @@ lines {
   color: var(--yellow);
 }
 
+.icons:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .section {
   background: var(--section);
   border: 2px solid var(--yellow);

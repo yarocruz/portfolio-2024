@@ -22,7 +22,7 @@ export default function Home() {
           height={200}
           className="sm:float-right rounded mb-4 sm:ml-5 w-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5" 
         />
-        <h1 className="text-2xl font-black mb-3">Hello 👋, I&apos;m Jay Cruz</h1>
+        <h1 className="text-2xl font-black mb-3">Hello 👋 I&apos;m Jay Cruz</h1>
         <p className="xl:w-11/12">I’m a Software Engineer based in Orlando, FL. My main domain has been in
         Web Development, but I’m interested in the broader world of Programming. 
         I studied Graphic Design and specialized in Web Design. I also completed

@@ -19,5 +19,5 @@
       </stop>
     </linearGradient>
   </defs>
-  <path id="Path_2" data-name="Path 2" d="M302,250.189H471.353l39.213-29.862H1525.793l32.6,29.862H1720.25" transform="translate(-302 -219.827)" fill="none" stroke="url(#animatedGradient2)" strokeWidth="0.78"/>
+  <path id="Path_2" data-name="Path 2" d="M302,250.189H471.353l39.213-29.862H1525.793l32.6,29.862H1720.25" transform="translate(-302 -219.827)" fill="none" stroke="url(#animatedGradient2)" stroke-width="3"/>
 </svg>
