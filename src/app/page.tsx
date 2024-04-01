@@ -20,19 +20,14 @@ export default function Home() {
           alt="Profile Picture"
           width={200}
           height={200}
-          className="sm:float-right rounded mb-4 sm:ml-5 w-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5" 
+          className="sm:float-right rounded mb-4 sm:ml-5 w-auto sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6" 
         />
         <h1 className="text-2xl font-black mb-3">Hello 👋 I&apos;m Jay Cruz</h1>
-        <p className="xl:w-11/12">I’m a Software Engineer based in Orlando, FL. My main domain has been in
-        Web Development, but I’m interested in the broader world of Programming. 
-        I studied Graphic Design and specialized in Web Design. I also completed
-        a “Full-Stack” JavaScript centered Coding Bootcamp. I did a short gig with a Startup
-        as a Front-End Developer, worked in Tech Support for ServiceNow, and I’m currently a 
-        Teaching Assistant for the 2U/edX Coding Bootcamps.</p>
-        {/* <p className="lg:w-10/12">Besides Programming, I have always had an interest in writing. My first career and college 
-          degree pursuit was in Journalism, but that only lasted one semester. Also, while I was 
-          studying Graphic and Web Design, I got into Photography and got pretty decent at it. At least 
-          decent enough to land a job in a theme park as a photographer.</p> */}
+        <p className="xl:w-11/12">I’m a Software Engineer and my main domain has been in
+        Web Development. My specialty has been in crafting user interfaces using React/Next.js and 
+        developing robust RESTful APIs with Node/Express with SQL databases. Beyond my core domain, 
+        I've been broadening my horizon by diving into languages like Python, Rust, and Golang, 
+        aiming to tackle unique software challenges across various aspects of technology.</p>
       </section>
     </div>
   );
