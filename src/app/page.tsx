@@ -26,7 +26,7 @@ export default function Home() {
         <p className="xl:w-11/12">I’m a Software Engineer and my main domain has been in
         Web Development. My specialty has been in crafting user interfaces using React/Next.js and 
         developing robust RESTful APIs with Node/Express with SQL databases. Beyond my core domain, 
-        I've been broadening my horizon by diving into languages like Python, Rust, and Golang, 
+        I&apos;ve been broadening my horizon by diving into languages like Python, Rust, and Golang, 
         aiming to tackle unique software challenges across various aspects of technology.</p>
       </section>
     </div>
