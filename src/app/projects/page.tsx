@@ -58,10 +58,10 @@ export default function Projects() {
     <div className="flex flex-col my-10">
       <nav className="mb-5">
         <ul className="flex font-bold text-xl">
-          <li className="hover:scale-110 mr-5">
+          <li className="transition duration-300 ease-in-out hover:scale-110 mr-5">
             <Link href="/">ABOUT</Link>
           </li>
-          <li className="hover:scale-110 underline underline-offset-8 decoration-sky-500">
+          <li className=" underline underline-offset-8 decoration-sky-500">
             <Link href="/projects">PROJECTS</Link>
           </li>
         </ul>
@@ -72,7 +72,7 @@ export default function Projects() {
                 {PROJECTS.map((project) => (
                     <li 
                       key={project.id} 
-                      className={selectedProjectID === project.id ? "mb-5 px-10 text-lg font-black bg-cyan-400 hover:cursor-pointer" : "hover:scale-110 mb-5 px-10 text-lg font-black hover:cursor-pointer" }
+                      className={selectedProjectID === project.id ? "mb-5 px-10 text-lg font-black bg-cyan-400 hover:cursor-pointer" : "transition duration-300 hover:scale-110 mb-5 px-10 text-lg font-black hover:cursor-pointer" }
                       onClick={() => handleProjectSelection(project.id)}
                       >
                         {project.title.toUpperCase()}
@@ -83,8 +83,8 @@ export default function Projects() {
                 <h1 className="logo text-lg font-black mb-5">{`${filteredProject[0].title.toUpperCase()} - ${filteredProject[0].short_description}`}</h1>
                 <p className="mb-5 lg:w-10/12">{filteredProject[0].long_description}</p>
                 <div className="flex text-cyan-400">
-                  <span className="mr-4 hover:scale-110"><a href="#">demo</a></span>
-                  <span className="hover:scale-110"><a href="#">code</a></span>
+                  <span className="mr-4 transition duration-300 hover:scale-110"><a href="#">demo</a></span>
+                  <span className="transition duration-300 hover:scale-110"><a href="#">code</a></span>
                 </div>
             </section>
         </div>

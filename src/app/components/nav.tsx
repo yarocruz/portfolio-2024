@@ -9,9 +9,9 @@ export default function Nav() {
                     <span className=''>Software Engineer</span>
                 </div>
                 <div className='flex space-x-4 items-center'>
-                    <a href="mailto:yarocruz@gmail.com"><Image className="icons hover:scale-150" src='/email.png' alt='SVG' width={15} height={15} /></a> 
-                    <a href="https://github.com/yarocruz" target='_blank'><Image className="icons hover:scale-150" src='/github.png' alt='SVG' width={15} height={15} /></a>
-                    <a href="https://www.linkedin.com/in/yarosky-cruz/" target='_blank'><Image className="icons hover:scale-150" src='/linkedin.png' alt='SVG' width={15} height={15} /></a>
+                    <a href="mailto:yarocruz@gmail.com"><Image className="icons transition duration-300 hover:scale-150" src='/email.png' alt='SVG' width={15} height={15} /></a> 
+                    <a href="https://github.com/yarocruz" target='_blank'><Image className="icons transition duration-300 hover:scale-150" src='/github.png' alt='SVG' width={15} height={15} /></a>
+                    <a href="https://www.linkedin.com/in/yarosky-cruz/" target='_blank'><Image className="icons transition duration-300 hover:scale-150" src='/linkedin.png' alt='SVG' width={15} height={15} /></a>
                 </div>
             </div>
             {/* TODO ADD LINK ICONS FOR EMAIL, GITHUB */}
