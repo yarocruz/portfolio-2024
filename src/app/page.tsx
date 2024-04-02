@@ -6,10 +6,10 @@ export default function Home() {
     <div className="flex flex-col my-10">
       <nav className="mb-5">
         <ul className="flex font-bold text-xl">
-          <li className="mr-5 underline underline-offset-8 decoration-sky-500">
+          <li className="hover:scale-110 mr-5 underline underline-offset-8 decoration-sky-500">
             <Link href="/">ABOUT</Link>
           </li>
-          <li className="">
+          <li className="hover:scale-110">
             <Link href="/projects">PROJECTS</Link>
           </li>
         </ul>
