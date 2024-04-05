@@ -25,7 +25,7 @@ export default function Projects() {
           {/* ADD Section to download resume */}
         </ul>
       </nav>
-      <section className="section lg:h-80">
+      <section className="section lg:h-80 overflow-auto leading-relaxed">
         <div className="md:flex">
             <ul className="md:mr-10 -ml-8 basis-1/4">
                 {PROJECTS.map((project) => (
