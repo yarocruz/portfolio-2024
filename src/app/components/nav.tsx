@@ -14,7 +14,6 @@ export default function Nav() {
                     <a href="https://www.linkedin.com/in/yarosky-cruz/" target='_blank'><Image className="icons transition duration-300 hover:scale-150" src='/linkedin.png' alt='SVG' width={15} height={15} /></a>
                 </div>
             </div>
-            {/* TODO ADD LINK ICONS FOR EMAIL, GITHUB */}
             <Image className="mt-5" src='/top-line.svg' alt="SVG" width={1418.25} height={30.862} />
         </nav>
     )

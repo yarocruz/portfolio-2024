@@ -40,7 +40,7 @@ export default function Projects() {
             </ul>
             <section className="flex flex-col">
                 <h1 className="logo text-lg font-black mb-5">{`${project[0].title.toUpperCase()} - ${project[0].short_description}`}</h1>
-                <p className="mb-5 lg:w-10/12">{project[0].long_description}</p>
+                <p className="mb-5">{project[0].long_description}</p>
                 <div className="flex text-cyan-400">
                   {/* TODO When hovering over demo link, show a preview image of project */}
                   <span className="mr-4 transition duration-300 hover:scale-110"><a href={project[0].demo} target="_blank">demo</a></span>

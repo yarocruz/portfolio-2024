@@ -24,19 +24,6 @@ body {
   background: linear-gradient(to bottom, var(--background-start), var(--background-end));
 }
 
-lines {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab,#23d5ab, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 244% 333%;
-	animation: gradient 5s linear infinite;
-	height: 100vh;
-}
-
-@keyframes gradient {
-	100% {
-		background-position: 100% 100%;
-	}
-}
-
 .logo {
   color: var(--yellow);
 }
