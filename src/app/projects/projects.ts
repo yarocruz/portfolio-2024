@@ -4,6 +4,7 @@ export const PROJECTS = [
         title: "rpsls",
         short_description: "Rock Paper Scissors Lizard Spock",
         long_description: "Rock Paper Scissors Lizard Spock is an expansion of the game Rock, Paper, Scissors. It was created by Sam Kass and Karen Bryla, but it was popularized in an episode of the Big Bang Theory called The Lizard-Spock expansion. I built it to learn more about the Vue.js library and to learn the basics of game logic.",
+        image: "/rpsls_logo.png",
         demo: "https://yarocruz.github.io/rpsls/",
         github: "https://github.com/yarocruz/rpsls"
     },

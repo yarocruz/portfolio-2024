@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { PROJECTS } from "./projects";
 
@@ -38,7 +39,14 @@ export default function Projects() {
                     </li>
                 ))}
             </ul>
-            <section className="flex flex-col">
+            <section className="">
+                <Image
+                  src={project[0].image as string}
+                  alt={project[0].title}
+                  width={100}
+                  height={100}
+                  className="md:float-left mb-5 sm:mb-0 md:mr-4"
+                /> 
                 <h1 className="logo text-lg font-black mb-5">{`${project[0].title.toUpperCase()} - ${project[0].short_description}`}</h1>
                 <p className="mb-5">{project[0].long_description}</p>
                 <div className="flex text-cyan-400">
