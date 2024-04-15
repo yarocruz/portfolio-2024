@@ -45,7 +45,7 @@ export default function Projects() {
                   alt={project[0].title}
                   width={100}
                   height={100}
-                  className="sm:float-left mb-5 sm:mb-2 sm:mr-4"
+                  className="sm:float-left mb-5 sm:mb-2 sm:mr-4 w-full sm:w-1/4 md:w-1/5 lg:w-1/6"
                 /> 
                 <h1 className="logo text-lg font-black mb-5">{`${project[0].title.toUpperCase()} - ${project[0].short_description}`}</h1>
                 <p className="mb-5">{project[0].long_description}</p>
