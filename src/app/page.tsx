@@ -22,12 +22,12 @@ export default function Home() {
           height={200}
           className="sm:float-right rounded mb-5 sm:mb-1 md:mb-5 sm:ml-5 w-auto sm:w-1/2 md:w-1/3 lg:w-1/4" 
         />
-        <h1 className="text-2xl font-black mb-3">Hello 👋 I&apos;m Jay Cruz</h1>
-        <p>I’m a Software Engineer and my jam has been Web Development. 
-        My specialty has been in crafting user interfaces using React/Next.js and 
-        developing robust RESTful APIs with Node/Express with SQL databases. Beyond Web Development, 
-        I&apos;ve been broadening my horizon by diving into languages like Python, Rust, and Golang, 
-        aiming to tackle unique software challenges across various aspects of technology.</p>
+        <h1 className="text-2xl font-black mb-3">Hi 👋 I&apos;m Jay</h1>
+        <p>I’m a Software Engineer and my jam has been Web Development, crafting user interfaces using 
+        React/Next.js and developing RESTful APIs with Node/Express with SQL databases. Besides JavaScript and
+        Web Development, I dabble with languages like Python, Rust, and Golang to make systems software
+        like CLI apps and to use other Backend stacks. Currently, I&apos;m diving into the fascinating world of 
+        Machine Learning, driven by a curiosity to create innovative and intelligent software solutions.</p>
         {/* TODO Maybe add a bit more copy */}
       </section>
     </div>
