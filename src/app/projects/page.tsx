@@ -17,7 +17,7 @@ export default function Projects() {
     <div className="flex flex-col my-10">
       <nav className="mb-5">
         <ul className="flex font-bold text-xl">
-          <li className="transition duration-300 ease-in-out hover:scale-110 mr-5">
+          <li className="transition duration-300 ease-in-out hover:scale-110 mr-5 hover:text-yellow-500">
             <Link href="/">ABOUT</Link>
           </li>
           <li className=" underline underline-offset-8 decoration-sky-500">
@@ -32,7 +32,7 @@ export default function Projects() {
                 {PROJECTS.map((project) => (
                     <li 
                       key={project.id} 
-                      className={selectedProjectID === project.id ? "mb-5 px-10 text-lg font-black bg-cyan-400 hover:cursor-pointer" : "transition duration-300 hover:scale-110 mb-5 px-10 text-lg font-black hover:cursor-pointer" }
+                      className={selectedProjectID === project.id ? "mb-5 px-10 text-lg font-black bg-cyan-400 hover:cursor-pointer" : "transition duration-300 hover:scale-110 mb-5 px-10 text-lg font-black hover:cursor-pointer hover:text-yellow-500" }
                       onClick={() => handleProjectSelection(project.id)}
                       >
                         {project.title.toUpperCase()}

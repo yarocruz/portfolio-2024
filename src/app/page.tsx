@@ -9,7 +9,7 @@ export default function Home() {
           <li className="mr-5 underline underline-offset-8 decoration-sky-500">
             <Link href="/">ABOUT</Link>
           </li>
-          <li className="transition duration-300 hover:scale-110">
+          <li className="transition duration-300 hover:scale-110 hover:text-yellow-500">
             <Link href="/projects">PROJECTS</Link>
           </li>
         </ul>
