@@ -14,7 +14,7 @@ export const PROJECTS = [
         short_description: "Color palette generator",
         long_description: "Color palette generator uses OpenAI's API to generate color palettes based on a given prompt. Depending on the prompt it can generate 2 to 5 colors. The colors will be displayed on the page and the hex codes can be copied to your clipboard. Node/Express was used for backend, and plain HTML, CSS, and JavaScript for frontend.",
         image: "/cpg_logo.jpg",
-        demo: "https://color-palette-generator.herokuapp.com/",
+        demo: "https://color-palette-generator-0kju.onrender.com/",
         github: "https://github.com/yarocruz/color-palette-generator/tree/main"
     },
     {
