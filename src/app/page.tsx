@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="flex flex-col my-10">
       <nav className="mb-5">
-        <ul className="flex font-bold text-xl">
+        <ul className="flex font-bold text-md">
           <li className="mr-5 underline underline-offset-8 decoration-sky-500">
             <Link href="/">ABOUT</Link>
           </li>

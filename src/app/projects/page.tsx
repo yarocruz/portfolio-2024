@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <div className="flex flex-col my-10">
       <nav className="mb-5">
-        <ul className="flex font-bold text-xl">
+        <ul className="flex font-bold text-md">
           <li className="transition duration-300 ease-in-out hover:scale-110 mr-5 hover:text-yellow-500">
             <Link href="/">ABOUT</Link>
           </li>
