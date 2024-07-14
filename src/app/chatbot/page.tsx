@@ -1,22 +1,25 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { useChat } from "ai/react";
 
 export default function Home() {
-    const [question, setQuestion] = useState('')    
-    const [answer, setAnswer] = useState('')
+    // const [question, setQuestion] = useState('')    
+    // const [answer, setAnswer] = useState('')
   
-    const fetchData = async () => {
-        const response = await fetch('/api', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ text: question })
-        });
-        const data = await response.json();
-        setAnswer(data.result);
-      };
+    // const fetchData = async () => {
+    //     const response = await fetch('/api', {
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type': 'application/json'
+    //       },
+    //       body: JSON.stringify({ text: question })
+    //     });
+    //     const data = await response.json();
+    //     setAnswer(data.result);
+    //   };
+
+    const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
     <div className="flex flex-col my-10">
@@ -42,15 +45,23 @@ export default function Home() {
         <input 
           type="text"
           placeholder="Ask away..." 
-          value={question}
-          onChange={(e) => setQuestion(e.target.value)}
+          value={input}
+          onChange={handleInputChange}
           className="border-2 border-gray-300 rounded-lg p-2 w-full mb-5 text-black"
         />
         <button 
-          onClick={fetchData}
+          onClick={handleSubmit}
           className="bg-cyan-400 text-white font-bold py-2 px-4 rounded"
         >Submit</button>
-       <p className="my-3">{answer}</p>
+       <p className="my-3">
+        {messages.length > 0
+          ? messages.map((message) => (
+              <div key={message.id}>
+                {message.content}
+                </div>
+            ))
+            : null}
+       </p>
       </section>
     </div>
   );

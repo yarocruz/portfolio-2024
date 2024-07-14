@@ -4,6 +4,7 @@ import { ChatOpenAI } from '@langchain/openai';
 import { ChatPromptTemplate } from '@langchain/core/prompts';
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
+import { StreamingTextResponse, LangChainAdapter } from 'ai';
 
 export async function POST(request: Request) {
 
@@ -13,7 +14,7 @@ export async function POST(request: Request) {
     const docs = await loader.load();
     //console.log(docs[0].pageContent);
 
-    const model = new ChatOpenAI({ model: 'gpt-4' });
+    const model = new ChatOpenAI({ model: 'gpt-4', streaming: true});
 
     const parser = new StringOutputParser();
 
@@ -46,10 +47,10 @@ export async function POST(request: Request) {
     const chain = promptTemplate.pipe(model).pipe(parser);
 
     const question = await request.json();
-    console.log("Question", question);
+    console.log("Question", question.messages[0].content);
 
-    const result = await chain.invoke({ text: question.text });
-    
-    return Response.json({result});
+    const stream = await chain.stream({ text: question.messages[0].content });
+    const aiStream = LangChainAdapter.toAIStream(stream);
+    return new StreamingTextResponse(aiStream);
 
 }
