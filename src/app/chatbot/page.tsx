@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
 import { useChat } from "ai/react";
 
 export default function Home() {
@@ -38,10 +37,24 @@ export default function Home() {
       </nav>
       <section className="section lg:h-80 overflow-auto leading-relaxed">
         <h1 className="text-2xl font-black mb-3">Ask my Bot</h1>
-        <p className="my-3">My chatbot is a really simple bot built Open AI API and Langchain. For now 
+        <p className="my-3">My chatbot is a really simple bot built with the Open AI API and Langchain. For now 
             it can only answer questions about me based on my resume, 
             but I plan to expand it to answer more questions in the future.
         </p>
+        <hr className="my-5" />
+        <div className="relative">
+        {messages.length > 0
+          ? messages.map((message) => (
+             message.role === 'user' ? (
+                <div key={message.id} className="bg-gray-200 p-2 rounded-lg mb-2 w-80 relative right-0">
+                    <p className="text-sm text-slate-900">{message.content}</p>
+                </div> ) : (
+                <div key={message.id} className="p-2 mb-2">
+                    <p className="text-sm">{message.content}</p>
+                </div>
+            )))
+            : null}
+        </div>    
         <input 
           type="text"
           placeholder="Ask away..." 
@@ -53,15 +66,6 @@ export default function Home() {
           onClick={handleSubmit}
           className="bg-cyan-400 text-white font-bold py-2 px-4 rounded"
         >Submit</button>
-       <p className="my-3">
-        {messages.length > 0
-          ? messages.map((message) => (
-              <div key={message.id}>
-                {message.content}
-                </div>
-            ))
-            : null}
-       </p>
       </section>
     </div>
   );

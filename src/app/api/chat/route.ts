@@ -48,8 +48,9 @@ export async function POST(request: Request) {
 
     const question = await request.json();
     console.log("Question", question.messages[0].content);
+    console.log("Messages", question)
 
-    const stream = await chain.stream({ text: question.messages[0].content });
+    const stream = await chain.stream({ text: question.messages[question.messages.length - 1].content });
     const aiStream = LangChainAdapter.toAIStream(stream);
     return new StreamingTextResponse(aiStream);
 
