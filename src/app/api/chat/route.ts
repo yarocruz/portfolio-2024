@@ -8,6 +8,7 @@ import { StreamingTextResponse, LangChainAdapter } from 'ai';
 import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
+import fetch from 'node-fetch';
 
 export async function POST(request: Request) {
     //https://drive.google.com/file/d/1PxHBs4NUtKmnAjfxicKh4AFtx0oVv20R/view?usp=sharing
@@ -15,19 +16,27 @@ export async function POST(request: Request) {
     const pdfUrl = "https://drive.google.com/uc?export=download&id=1PxHBs4NUtKmnAjfxicKh4AFtx0oVv20R";
     const localPdfPath = path.join('/tmp', 'resume.pdf');
 
-    const response = await axios({
-        url: pdfUrl,
-        method: 'GET',
-        responseType: 'stream'
-    });
+    // const response = await axios({
+    //     url: pdfUrl,
+    //     method: 'GET',
+    //     responseType: 'stream'
+    // });
 
-    const writer = fs.createWriteStream(localPdfPath);
-    response.data.pipe(writer);
+    // const writer = fs.createWriteStream(localPdfPath);
+    // response.data.pipe(writer);
 
-    await new Promise((resolve, reject) => {
-        writer.on('finish', resolve);
-        writer.on('error', reject);
-    });
+    // await new Promise((resolve, reject) => {
+    //     writer.on('finish', resolve);
+    //     writer.on('error', reject);
+    // });
+
+    const response = await fetch(pdfUrl);
+    if (!response.ok) {
+        throw new Error(`Failed to fetch PDF: ${response.statusText}`);
+    }
+    
+    const buffer = await response.buffer();
+    fs.writeFileSync(localPdfPath, buffer);
 
     const loader = new PDFLoader(localPdfPath, {
         parsedItemSeparator: " ",
