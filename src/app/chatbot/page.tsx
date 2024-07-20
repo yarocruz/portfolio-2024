@@ -37,7 +37,7 @@ export default function Home() {
       </nav>
       <section className="section lg:h-80 overflow-auto leading-relaxed">
         <h1 className="text-2xl font-black mb-3">Ask my Bot</h1>
-        <p className="my-3">My chatbot is a really simple bot built with the Open AI API and Langchain. For now 
+        <p className="my-3">My chatbot is a really simple bot built with the Open AI API and Langchain. At the moment, 
             it can only answer questions about me based on my resume, 
             but I plan to expand it to answer more questions in the future.
         </p>
