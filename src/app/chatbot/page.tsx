@@ -46,7 +46,7 @@ export default function Home() {
         {messages.length > 0
           ? messages.map((message) => (
              message.role === 'user' ? (
-                <div key={message.id} className="bg-gray-200 p-2 rounded-lg mb-2 w-80 relative right-0">
+                <div key={message.id} className="bg-gray-200 p-2 rounded-lg mb-2 w-80 right-0">
                     <p className="text-sm text-slate-900">{message.content}</p>
                 </div> ) : (
                 <div key={message.id} className="p-2 mb-2">
