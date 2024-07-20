@@ -5,10 +5,31 @@ import { ChatPromptTemplate } from '@langchain/core/prompts';
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
 import { StreamingTextResponse, LangChainAdapter } from 'ai';
+import fs from 'fs';
+import path from 'path';
+import axios from 'axios';
 
 export async function POST(request: Request) {
+    //https://drive.google.com/file/d/1PxHBs4NUtKmnAjfxicKh4AFtx0oVv20R/view?usp=sharing
 
-    const loader = new PDFLoader("resume.pdf", {
+    const pdfUrl = "https://drive.google.com/uc?export=download&id=1PxHBs4NUtKmnAjfxicKh4AFtx0oVv20R";
+    const localPdfPath = path.join('/tmp', 'resume.pdf');
+
+    const response = await axios({
+        url: pdfUrl,
+        method: 'GET',
+        responseType: 'stream'
+    });
+
+    const writer = fs.createWriteStream(localPdfPath);
+    response.data.pipe(writer);
+
+    await new Promise((resolve, reject) => {
+        writer.on('finish', resolve);
+        writer.on('error', reject);
+    });
+
+    const loader = new PDFLoader(localPdfPath, {
         parsedItemSeparator: " ",
     });
     const docs = await loader.load();
