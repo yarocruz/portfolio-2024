@@ -6,7 +6,7 @@ import { StringOutputParser } from "@langchain/core/output_parsers";
 import { StreamingTextResponse, LangChainAdapter } from 'ai';
 import nodemailer from 'nodemailer';
 
-async function sendEmail(subject, text) {
+async function sendEmail(subject: string, text: string) {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
