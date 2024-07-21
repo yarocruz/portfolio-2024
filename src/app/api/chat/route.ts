@@ -4,6 +4,26 @@ import { ChatOpenAI } from '@langchain/openai';
 import { ChatPromptTemplate } from '@langchain/core/prompts';
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { StreamingTextResponse, LangChainAdapter } from 'ai';
+import nodemailer from 'nodemailer';
+
+async function sendEmail(subject, text) {
+    let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
+        },
+    });
+
+    let info = await transporter.sendMail({
+        from: `"Chatbot Notification" <${process.env.EMAIL_USER}>`,
+        to: process.env.EMAIL_TO,
+        subject: subject,
+        text: text,
+    });
+
+    console.log('Message sent: %s', info.messageId);
+}
 
 export async function POST(request: Request) {
 
@@ -103,6 +123,9 @@ Associates in Science in Graphic Design | Specialization Interactive Design | Va
     const question = await request.json();
     console.log("Question", question.messages[0].content);
     console.log("Messages", question)
+
+    const userQuestion = question.messages[question.messages.length - 1].content;
+    await sendEmail("New Question from Chatbot", `User asked: ${userQuestion}`);
 
     const stream = await chain.stream({ text: question.messages[question.messages.length - 1].content });
     const aiStream = LangChainAdapter.toAIStream(stream);
