@@ -23,15 +23,18 @@ export default function Home() {
   return (
     <div className="flex flex-col my-10">
       <nav className="mb-5">
-        <ul className="flex font-bold text-md">
+        <ul className="flex overflow-auto text-nowrap font-bold text-md">
           <li className="mr-5 transition duration-300 hover:scale-110 hover:text-yellow-500">
             <Link href="/">ABOUT</Link>
           </li>
           <li className="mr-5 transition duration-300 hover:scale-110 hover:text-yellow-500">
             <Link href="/projects">PROJECTS</Link>
           </li>
-          <li className="underline underline-offset-8 decoration-sky-500">
+          <li className="mr-5 underline underline-offset-8 decoration-sky-500 text-yellow-500">
             <Link href="/chatbot">ASK MY BOT</Link>
+          </li>
+          <li className="mr-5 transition duration-300 hover:scale-110 hover:text-yellow-500">
+            <a href="/resume.pdf" target="_blank">RESUME</a>
           </li>
         </ul>
       </nav>
@@ -42,15 +45,15 @@ export default function Home() {
             but I plan to expand it to answer more questions in the future.
         </p>
         <hr className="my-5" />
-        <div className="relative">
+        <div className="">
         {messages.length > 0
           ? messages.map((message) => (
              message.role === 'user' ? (
-                <div key={message.id} className="bg-gray-200 p-2 rounded-lg mb-2 w-80 right-0">
-                    <p className="text-sm text-slate-900">{message.content}</p>
+                <div key={message.id} className="p-2 mb-2">
+                    <p className="text-yellow-500 text-md font-bold">{message.content}</p>
                 </div> ) : (
                 <div key={message.id} className="p-2 mb-2">
-                    <p className="text-sm">{message.content}</p>
+                    <p className="">{message.content}</p>
                 </div>
             )))
             : null}

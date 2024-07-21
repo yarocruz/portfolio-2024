@@ -16,15 +16,18 @@ export default function Projects() {
   return (
     <div className="flex flex-col my-10">
       <nav className="mb-5">
-        <ul className="flex font-bold text-md">
+        <ul className="flex text-nowrap overflow-auto font-bold text-md">
           <li className="transition duration-300 ease-in-out hover:scale-110 mr-5 hover:text-yellow-500">
             <Link href="/">ABOUT</Link>
           </li>
-          <li className="mr-5 underline underline-offset-8 decoration-sky-500">
+          <li className="mr-5 underline underline-offset-8 decoration-sky-500 text-yellow-500">
             <Link href="/projects">PROJECTS</Link>
           </li>
-          <li className="transition duration-300 hover:scale-110 hover:text-yellow-500">
+          <li className="mr-5 transition duration-300 hover:scale-110 hover:text-yellow-500">
             <Link href="/chatbot">ASK MY BOT</Link>
+          </li>
+          <li className="mr-5 transition duration-300 hover:scale-110 hover:text-yellow-500">
+            <a href="/resume.pdf" target="_blank">RESUME</a>
           </li>
           {/* ADD Section to download resume */}
         </ul>
