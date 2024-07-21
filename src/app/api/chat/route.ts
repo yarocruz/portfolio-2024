@@ -8,7 +8,7 @@ import { StreamingTextResponse, LangChainAdapter } from 'ai';
 import fetch from 'node-fetch';
 import pdf from 'pdf-parse';
 
-export async function handler(req, res) {
+export async function POST(req: Request, res: Response) {
 
     // const loader = new PDFLoader('resume.pdf', {
     //     parsedItemSeparator: " ",
@@ -57,7 +57,8 @@ export async function handler(req, res) {
     // return new StreamingTextResponse(aiStream);
 
     if (req.method !== 'POST') {
-        return res.status(405).json({ message: 'Method Not Allowed' });
+        //return res.status(405).json({ message: 'Method Not Allowed' });
+        return res.status;
     }
 
     try {
@@ -119,10 +120,10 @@ export async function handler(req, res) {
         const aiStream = LangChainAdapter.toAIStream(stream);
 
         console.log("Returning AI stream response");
-        return new StreamingTextResponse(aiStream).pipe(res);
+        return new StreamingTextResponse(aiStream);
     } catch (error) {
         console.error("Error in API handler:", error);
-        return res.status(500).json({ error: error.message });
+        return res.status;
     }
 
 }
