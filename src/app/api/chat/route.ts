@@ -88,7 +88,7 @@ Associates in Science in Graphic Design | Specialization Interactive Design | Va
     // const docs = await loader.load();
     // console.log(docs[0].pageContent);
 
-    const model = new ChatOpenAI({ model: 'gpt-4', streaming: true});
+    const model = new ChatOpenAI({ model: 'gpt-4o-mini', streaming: true});
 
     const parser = new StringOutputParser();
 
@@ -121,13 +121,13 @@ Associates in Science in Graphic Design | Specialization Interactive Design | Va
     const chain = promptTemplate.pipe(model).pipe(parser);
 
     const question = await request.json();
-    console.log("Question", question.messages[0].content);
-    console.log("Messages", question)
 
     const userQuestion = question.messages[question.messages.length - 1].content;
-    await sendEmail("New Question from Chatbot", `User asked: ${userQuestion}`);
 
     const stream = await chain.stream({ text: question.messages[question.messages.length - 1].content });
+
+    await sendEmail("New Question from Chatbot", `User asked: ${userQuestion}`);
+
     const aiStream = LangChainAdapter.toAIStream(stream);
     return new StreamingTextResponse(aiStream);
 

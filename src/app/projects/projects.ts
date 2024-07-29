@@ -30,7 +30,7 @@ export const PROJECTS = [
         id: 4,
         title: "tm",
         short_description: "Task Manager",
-        long_description: "Simple demo 'todo' app built with React on the client and Golang on the server. The Golang server was deployed to an AWS EC2 instance and the React client was deployed to an S3 bucket. The server is a barebones RESTful API that gets the the Tasks, adds a Task, and deletes a task.",
+        long_description: "Simple demo 'todo' app built with React on the client and Golang on the server. The Golang server was deployed to an AWS EC2 instance and the React client was deployed to an S3 bucket. The server is a barebones RESTful API that gets the Tasks, adds a Task, and deletes a task.",
         image: "/taskmanager.png",
         demo: "http://taskmanager-frontend.s3-website.us-east-2.amazonaws.com/",
         github: "https://github.com/yarocruz/taskmanager"
